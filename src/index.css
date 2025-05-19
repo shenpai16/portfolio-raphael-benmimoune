@@ -1,0 +1,22 @@
+@import "tailwindcss";
+
+/* Correction des variables CSS personnalisées */
+:root {
+    --color-dark: #0D0D0D;
+    --color-blood: #A10505;
+    --color-bone: #EDEDED;
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 8px 2px rgba(161, 5, 5, 0.7);
+  }
+  50% {
+    box-shadow: 0 0 20px 8px rgba(237, 237, 237, 0.9);
+  }
+}
+
+.btn-glow {
+  animation: pulse-glow 2.5s infinite ease-in-out;
+  border-radius: 0.5rem; /* même arrondi que ton bouton */
+}
