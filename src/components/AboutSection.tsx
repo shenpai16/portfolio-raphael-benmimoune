@@ -1,4 +1,5 @@
 import RoundedCard from "./RoundedCard";
+import Tooltip from "./Tooltip";
 
 export default function AboutSection() {
   return (
@@ -8,11 +9,8 @@ export default function AboutSection() {
       style={{ backgroundColor: "rgba(30, 30, 30, 1)" }} // fallback si var non prise en charge
     >
       <div
-        className="flex flex-col
-          w-[calc(100vw-4rem)]  /* presque toute la largeur, 2rem (32px) de marge totale */
-          max-w-[1200px]        /* largeur max pour pas que ce soit trop grand */
-          border-l border-r border-white border-opacity-80
-          bg-[var(--color-dark)] text-[var(--color-charcoal)]
+        className="
+          text-[var(--color-charcoal)]
           px-8 py-16"
       >
         <h2
@@ -24,16 +22,50 @@ export default function AboutSection() {
         >
           Je suis un développeur full stack passionné, récemment diplômé, prêt à relever tous les défis du web. J’aime concevoir des solutions élégantes, performantes, et accessibles. Entre front-end créatif et back-end solide, mon objectif est de donner vie à des idées.
         </p>
+        
+          <div className="flex gap-8 justify-center mt-10">
+            <RoundedCard>
+              <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
+              from-blue-500 to-blue-200  font-bold">Front-End</h1>
+              <div className="flex justify-center gap-6 mt-4">
+                <Tooltip text="React">
+                  <img src="/assets/react.svg" alt="React" className="w-14 h-14" />
+                </Tooltip>
+                <Tooltip text="Vue.js">
+                  <img src="/assets/Vue.js.svg" alt="Vue.js" className="w-14 h-14" />
+                </Tooltip>
+                <Tooltip text="Tailwind CSS">
+                  <img src="/assets/Tailwind CSS.svg" alt="Tailwind" className="w-14 h-14" />
+                </Tooltip>
+                <Tooltip text="Vite (outil de build)">
+                  <img src="/assets/vite.svg" alt="Vite" className="w-14 h-14" />                
+                </Tooltip>
+              </div>
+            </RoundedCard>
 
-        <RoundedCard>
-        <img
-          src="/ton-image.jpg"
-          alt="Profil"
-          className="w-32 h-32 rounded-full mx-auto mb-4 object-cover"
-        />
+            <RoundedCard>
+              <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
+              from-blue-500 to-blue-200  font-bold">Back-End</h1>
+              <div className="flex justify-center gap-6 mt-4">
+                <div className="inline-block bg-white p-2 rounded">
+                  <Tooltip text="Symfony (PHP)">
+                    <img src="/assets/symfony.svg" alt="Symfony" className="w-14 h-14" />
+                  </Tooltip>
+                </div>
+                <Tooltip text="Api Platform (API REST)">
+                  <img src="/assets/apiPlatform.svg" alt="Api Platform" className="w-14 h-14" />
+                </Tooltip>
+                <Tooltip text="EasyAdmin (Back-office)">
+                  <img src="/assets/easyAdmin.webp" alt="EasyAdmin" className="w-14 h-14" />
+                </Tooltip>
+                <Tooltip text="DevOps (Débutant mais j'apprends vite !)">
+                  <img src="/assets/devops-2.svg" alt="PostgreSQL" className="w-14 h-14" />
+                </Tooltip>
+              </div>
+            </RoundedCard>
 
-      </RoundedCard>
-      </div>
+          </div>
+        </div>
     </section>
   );
 }
