@@ -127,7 +127,7 @@ export default function AboutSection() {
                 <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
                 from-blue-500 to-blue-200 font-bold">Admin de l'application Lettre en lumière</h1>
                 <div className="flex justify-center gap-6 mt-4">
-                  <Tooltip text="Fait en react (en cours de développement)">
+                  <Tooltip text="Lettre en lumière est une plateforme éducative dédiée aux prisonniers, conçue pour faciliter leur apprentissage de la lecture et de l’écriture. Elle offre aux professeurs des outils simples pour créer, partager et gérer des exercices adaptés, favorisant ainsi la réinsertion par l’éducation. Fait en Symfony, EasyAdmin, Api-Platform">
                     <img src="/assets/easyAdmin.webp" alt="Lettre en lumiere" className="w-full h-48 object-contain" />
                   </Tooltip>
                 </div>
