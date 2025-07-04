@@ -22,6 +22,13 @@ export default function AboutSection() {
         >
           Je suis un développeur full stack passionné, récemment diplômé, prêt à relever tous les défis du web. J’aime concevoir des solutions élégantes, performantes, et accessibles. Entre front-end créatif et back-end solide, mon objectif est de donner vie à des idées.
         </p>
+
+
+        <h2
+          className="text-5xl text-white font-bold mt-26 mb-8 text-center"
+        >
+          Mes compétences 
+        </h2>
         
           <div className="flex gap-8 justify-center mt-10">
             <RoundedCard>
@@ -47,7 +54,7 @@ export default function AboutSection() {
               <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
               from-blue-500 to-blue-200  font-bold">Back-End</h1>
               <div className="flex justify-center gap-6 mt-4">
-                <div className="inline-block bg-white p-2 rounded">
+                <div className="inline-block bg-white rounded-full w-13 h-13 ">
                   <Tooltip text="Symfony (PHP)">
                     <img src="/assets/symfony.svg" alt="Symfony" className="w-14 h-14" />
                   </Tooltip>
@@ -64,8 +71,74 @@ export default function AboutSection() {
               </div>
             </RoundedCard>
 
+             
+
           </div>
+          {/* Sections Mes Réalisations */}
+
+          <div className="flex flex-col gap-8 justify-center items-center mt-36">
+            <h2 className="text-5xl text-white font-bold mb-8 text-center">
+              Mes réalisations
+            </h2>
+
+            {/* Wrapper en grille 3 colonnes max */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center w-full max-w-6xl">
+              <RoundedCard>
+                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
+                from-blue-500 to-blue-200 font-bold">Portfolio</h1>
+                <div className="flex justify-center gap-6 mt-4">
+                  <Tooltip text="Portfolio (vous y êtes !)">
+                    <img src="/assets/portfolio.svg" alt="Portfolio" className="w-14 h-14" />
+                  </Tooltip>
+                </div>
+              </RoundedCard>
+
+              <RoundedCard>
+                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r 
+                from-blue-500 to-blue-200 font-bold">Produits maison pour seniors et personnes handicapées.</h1>
+                <div className="flex justify-center gap-6 mt-4">
+                  <Tooltip text="Fait en React">
+                    <img src="/assets/pps.png" alt="pps" className="w-full h-48 object-contain" />
+                  </Tooltip>
+                </div>
+              </RoundedCard>
+
+              <RoundedCard>
+                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
+                from-blue-500 to-blue-200 font-bold">Admin pour le lycée Pierre Larousse</h1>
+                <div className="flex justify-center gap-6 mt-4">
+                  <Tooltip text="Fait en Symfony et EasyAdmin">
+                    <img src="/assets/adminToucy.png" alt="Admin" className="w-full h-48 object-contain" />
+                  </Tooltip>
+                </div>
+              </RoundedCard>
+
+              <RoundedCard>
+                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
+                from-blue-500 to-blue-200 font-bold">Refont du site lyçée Pierre Larousse</h1>
+                <div className="flex justify-center gap-6 mt-4">
+                  <Tooltip text="Fait en react (en cours de développement)">
+                    <img src="/assets/CSPL-LOGO.jpg" alt="Lycée" className="w-full h-48 object-contain" />
+                  </Tooltip>
+                </div>
+              </RoundedCard>
+
+              <RoundedCard>
+                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
+                from-blue-500 to-blue-200 font-bold">Admin de l'application Lettre en lumière</h1>
+                <div className="flex justify-center gap-6 mt-4">
+                  <Tooltip text="Fait en react (en cours de développement)">
+                    <img src="/assets/easyAdmin.webp" alt="Lettre en lumiere" className="w-full h-48 object-contain" />
+                  </Tooltip>
+                </div>
+              </RoundedCard>
+            </div>
+          </div>
+
+        
+
         </div>
+        
     </section>
   );
 }

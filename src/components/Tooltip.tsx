@@ -10,7 +10,7 @@ export default function Tooltip({text, children}: {text: string, children: React
                 opacity-0 group-hover:opacity-100 
                 transition-opacity duration-300
                 z-10
-                whitespace-nowrap">
+                whitespace-normal">
         {text}
       </div>
     </div>
