@@ -2,6 +2,10 @@ import IntroSection from "./components/IntroSection";
 import Header from "./layouts/Header";
 import AboutSection from "./components/AboutSection";
 import ServicesSection from "./components/ServicesSection";
+import OffersSection from "./components/OffersSection";
+import ContactSection from "./components/ContactSection";
+import Footer from "./layouts/Footer";
+
 
 export default function App() {
   return (
@@ -14,6 +18,9 @@ export default function App() {
       
       <AboutSection />
       <ServicesSection />
+      <OffersSection />
+      <ContactSection />
+      <Footer />
     </>
   );
 }

@@ -76,7 +76,7 @@ export default function AboutSection() {
           </div>
           {/* Sections Mes Réalisations */}
 
-          <div className="flex flex-col gap-8 justify-center items-center mt-36">
+          <div id="projects" className="flex flex-col gap-8 justify-center items-center mt-36">
             <h2 className="text-5xl text-white font-bold mb-8 text-center">
               Mes réalisations
             </h2>

@@ -3,7 +3,7 @@ import { Server, Monitor, Code } from "lucide-react";
 
 export default function ServicesSection() {
   return (
-    <section className="min-h-screen bg-[var(--color-darker)] flex justify-center items-stretch">
+    <section className="bg-[var(--color-darker)] flex justify-center items-stretch pt-24 pb-12">
       <div className="text-[var(--color-charcoal)] px-8 py-16">
         <h2 className="text-5xl font-bold text-center mb-12 text-white">
           Mes services
@@ -43,14 +43,7 @@ export default function ServicesSection() {
             </CardContent>
           </Card>
         </div>
-        <div className="text-center mt-12">
-          <a
-            href="#contact"
-            className="inline-block bg-blue-500 text-white font-semibold px-8 py-4 rounded-lg hover:bg-blue-600 transition"
-          >
-            Discutons de votre projet
-          </a>
-        </div>
+
       </div>
     </section>
   );

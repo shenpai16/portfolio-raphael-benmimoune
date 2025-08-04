@@ -1,4 +1,12 @@
 function Header() {
+  const NavLinks = [
+    { id: "About", label: "À propos de moi" },
+    { id: "Projects", label: "Projets" },
+    { id: "offers", label: "Mes offres" },
+    { id: "Contact", label: "Contact" },
+  ];
+
+
   return (
     <header className="sticky top-0 z-50 flex justify-between items-center p-4 bg-[var(--color-dark)] bg-opacity-80 backdrop-blur-md text-white shadow-md">
       <h1 className="text-2xl font-bold flex items-center gap-2">
@@ -8,13 +16,13 @@ function Header() {
       </h1>
       <nav>
         <ul className="flex space-x-6">
-          {["About", "Projects", "Contact"].map((item) => (
-            <li key={item}>
+          {NavLinks.map(({ id, label }) => (
+            <li key={id}>
               <a
-                href={`#${item.toLowerCase()}`}
+                href={`#${id.toLowerCase()}`}
                 className="relative group text-white font-medium"
               >
-                {item}
+                {label}
                 <span className="absolute left-0 -bottom-1 w-0 h-0.5 bg-[var(--color-blood)] transition-all group-hover:w-full"></span>
               </a>
             </li>
