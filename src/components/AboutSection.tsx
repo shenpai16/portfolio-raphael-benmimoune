@@ -88,7 +88,7 @@ export default function AboutSection() {
                 from-blue-500 to-blue-200 font-bold">Portfolio</h1>
                 <div className="flex justify-center gap-6 mt-4">
                   <Tooltip text="Portfolio (vous y êtes !)">
-                    <img src="/assets/portfolio.svg" alt="Portfolio" className="w-14 h-14" />
+                    <img src="/assets/logo_officiel_clean.svg" alt="Portfolio" className="w-46 h-46" />
                   </Tooltip>
                 </div>
               </RoundedCard>
