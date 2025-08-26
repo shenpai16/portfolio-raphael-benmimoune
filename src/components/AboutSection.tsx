@@ -1,5 +1,7 @@
-import RoundedCard from "./RoundedCard";
+import RoundedCard from "./ui/RoundedCard";
 import Tooltip from "./Tooltip";
+import ProjectCard from "./projects/ProjectCard";
+import { projects } from "../data/project";
 
 export default function AboutSection() {
   return (
@@ -83,55 +85,9 @@ export default function AboutSection() {
 
             {/* Wrapper en grille 3 colonnes max */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 justify-center w-full max-w-6xl">
-              <RoundedCard>
-                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
-                from-blue-500 to-blue-200 font-bold">Portfolio</h1>
-                <div className="flex justify-center gap-6 mt-4">
-                  <Tooltip text="Portfolio (vous y êtes !)">
-                    <img src="/assets/logo_officiel_clean.svg" alt="Portfolio" className="w-46 h-46" />
-                  </Tooltip>
-                </div>
-              </RoundedCard>
-
-              <RoundedCard>
-                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r 
-                from-blue-500 to-blue-200 font-bold">Produits maison pour seniors et personnes handicapées.</h1>
-                <div className="flex justify-center gap-6 mt-4">
-                  <Tooltip text="Fait en React">
-                    <img src="/assets/pps.png" alt="pps" className="w-full h-48 object-contain" />
-                  </Tooltip>
-                </div>
-              </RoundedCard>
-
-              <RoundedCard>
-                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
-                from-blue-500 to-blue-200 font-bold">Admin pour le lycée Pierre Larousse</h1>
-                <div className="flex justify-center gap-6 mt-4">
-                  <Tooltip text="Fait en Symfony et EasyAdmin">
-                    <img src="/assets/adminToucy.png" alt="Admin" className="w-full h-48 object-contain" />
-                  </Tooltip>
-                </div>
-              </RoundedCard>
-
-              <RoundedCard>
-                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
-                from-blue-500 to-blue-200 font-bold">Refont du site lyçée Pierre Larousse</h1>
-                <div className="flex justify-center gap-6 mt-4">
-                  <Tooltip text="Fait en react (en cours de développement)">
-                    <img src="/assets/CSPL-LOGO.jpg" alt="Lycée" className="w-full h-48 object-contain" />
-                  </Tooltip>
-                </div>
-              </RoundedCard>
-
-              <RoundedCard>
-                <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
-                from-blue-500 to-blue-200 font-bold">Admin de l'application Lettre en lumière</h1>
-                <div className="flex justify-center gap-6 mt-4">
-                  <Tooltip text="Lettre en lumière est une plateforme éducative dédiée aux prisonniers, conçue pour faciliter leur apprentissage de la lecture et de l’écriture. Elle offre aux professeurs des outils simples pour créer, partager et gérer des exercices adaptés, favorisant ainsi la réinsertion par l’éducation. Fait en Symfony, EasyAdmin, Api-Platform">
-                    <img src="/assets/easyAdmin.webp" alt="Lettre en lumiere" className="w-full h-48 object-contain" />
-                  </Tooltip>
-                </div>
-              </RoundedCard>
+              {projects.map((project, i) => (
+                <ProjectCard key={i} {...project} />
+              ))}
             </div>
           </div>
 

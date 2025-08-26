@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import { li } from "framer-motion/client";
 
 function Header() {
 
