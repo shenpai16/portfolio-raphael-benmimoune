@@ -22,7 +22,13 @@ export default function AboutSection() {
         </h2>
         <p className="max-w-3xl text-white text-lg text-center leading-relaxed mx-auto"
         >
-          Je suis un développeur full stack passionné, récemment diplômé, prêt à relever tous les défis du web. J’aime concevoir des solutions élégantes, performantes, et accessibles. Entre front-end créatif et back-end solide, mon objectif est de donner vie à des idées.
+          Développeur full stack passionné, je transforme les idées en{" "}
+          <span className="relative after:block after:h-[2px] after:bg-blue-500 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform">
+            expériences web
+          </span>{" "}
+          qui marquent les esprits.
+          Entre un front-end créatif qui séduit l’œil et un back-end robuste qui assure la performance, je conçois des solutions élégantes, rapides et accessibles à tous.
+          Mon moteur ? Relever chaque défi du web avec curiosité, précision et une bonne dose d’audace, pour donner vie à des projets qui allient esthétique et efficacité
         </p>
 
 
