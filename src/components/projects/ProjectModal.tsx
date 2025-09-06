@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 type Slide = { src: string; caption: string };
@@ -6,6 +6,9 @@ type ProjectModalProps = { slides: Slide[]; onClose: () => void };
 
 export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
   const [current, setCurrent] = useState(0);
+  const modalRef = useRef<HTMLDivElement>(null);
+
+
 
   const prevSlide = () =>
     setCurrent((p) => (p === 0 ? slides.length - 1 : p - 1));
@@ -26,6 +29,15 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
     };
   }, [onClose]);
 
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (modalRef.current && !modalRef.current.contains(e.target as Node)){
+        onClose();
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+  }, [onClose]);
+
   return (
     <div
       className="fixed inset-0 z-[9999] flex items-center justify-center"
@@ -43,6 +55,7 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
       <div
         className="relative z-[10000] w-full max-w-4xl p-4"
         onClick={(e) => e.stopPropagation()}
+        ref={modalRef}
       >
         {/* Bouton fermer */}
         <button
