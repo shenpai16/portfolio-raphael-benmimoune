@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import RoundedCard from '../ui/RoundedCard';
 import ProjectModal from './ProjectModal';
 
@@ -9,7 +9,7 @@ type ProjectCardProps = {
   slides: { src: string; caption: string}[];
 };
 
-export default function ProjectCard({title, image, tooltip, slides}: ProjectCardProps) {
+export default function ProjectCard({title, image, slides}: ProjectCardProps) {
 
     const [open, setOpen] = useState(false);
 
