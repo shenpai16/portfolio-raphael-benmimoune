@@ -1,7 +1,6 @@
-import RoundedCard from "./ui/RoundedCard";
-import Tooltip from "./Tooltip";
 import ProjectCard from "./projects/ProjectCard";
 import { projects } from "../data/project";
+import TechCarousel from "./ui/TechCarousel";
 
 export default function AboutSection() {
   return (
@@ -37,7 +36,13 @@ export default function AboutSection() {
         >
           Mes compétences 
         </h2>
-        
+
+        <section id="skills" className="py-16 text-white">
+          <div className="container mx-auto px-4">
+            <TechCarousel />
+          </div>
+        </section>
+        {/* 
           <div className="flex gap-8 justify-center mt-10">
             <RoundedCard>
               <h1 className="text-center text-transparent bg-clip-text bg-gradient-to-r
@@ -81,7 +86,7 @@ export default function AboutSection() {
 
              
 
-          </div>
+          </div> */}
           {/* Sections Mes Réalisations */}
 
           <div id="projects" className="flex flex-col gap-8 justify-center items-center mt-36">
