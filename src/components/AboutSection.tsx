@@ -12,23 +12,40 @@ export default function AboutSection() {
       <div
         className="
           text-[var(--color-charcoal)]
-          px-8 py-16"
+          px-4 sm:px-8 py-16"
       >
         <h2
           className="text-5xl text-white font-bold mb-8 text-center"
         >
           À propos de moi
         </h2>
-        <p className="max-w-3xl text-white text-lg text-center leading-relaxed mx-auto"
+        <p
+          className="
+            mx-auto px-6 sm:px-8
+            w-full max-w-md sm:max-w-2xl md:max-w-3xl
+            text-white text-base sm:text-lg text-center leading-relaxed
+            break-words hyphens-auto whitespace-normal
+            overflow-hidden
+          "
+          style={{
+            wordBreak: 'break-word',
+            overflowWrap: 'anywhere',
+            boxSizing: 'border-box',
+          }}
         >
-          Développeur full stack passionné, je transforme les idées en{" "}
-          <span className="relative after:block after:h-[2px] after:bg-blue-500 after:scale-x-0 hover:after:scale-x-100 after:origin-left after:transition-transform">
-            expériences web
-          </span>{" "}
-          qui marquent les esprits.
-          Entre un front-end créatif qui séduit l’œil et un back-end robuste qui assure la performance, je conçois des solutions élégantes, rapides et accessibles à tous.
-          Mon moteur ? Relever chaque défi du web avec curiosité, précision et une bonne dose d’audace, pour donner vie à des projets qui allient esthétique et efficacité
-        </p>
+  Développeur full stack passionné, je transforme les idées en{" "}
+  <span
+    className="
+      relative inline-block
+      after:block after:h-[2px] after:bg-blue-500
+      after:w-0 group-hover:after:w-full
+      after:transition-[width] after:duration-300 after:ease-out
+      "
+  >
+    expériences web
+  </span>{" "}
+  qui marquent les esprits. Entre un front-end créatif qui séduit l’œil et un back-end robuste qui assure la performance, je conçois des solutions élégantes, rapides et accessibles à tous. Mon moteur ? Relever chaque défi du web avec curiosité, précision et une bonne dose d’audace, pour donner vie à des projets qui allient esthétique et efficacité.
+</p>
 
 
         <h2
