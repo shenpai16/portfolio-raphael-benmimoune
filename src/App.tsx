@@ -12,7 +12,7 @@ export default function App() {
     <>
       <Header />
       
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-[var(--color-dark)] to-[var(--color-blood)]">
+      <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-sky-300 via-sky-500 to-blue-700">
         <IntroSection />
       </main>
       
