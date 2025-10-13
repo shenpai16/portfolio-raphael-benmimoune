@@ -14,7 +14,7 @@ function Header() {
 
 
   return (
-    <header className="sticky top-0 z-50 flex justify-between items-center p-4 bg-[var(--color-dark)] bg-opacity-80 backdrop-blur-md text-white shadow-md">
+    <header className="sticky top-0 z-50 flex justify-between items-center p-4  bg-sky-900/70 backdrop-blur-md text-white shadow-md">
       <h1 className="text-2xl font-bold flex items-center gap-2">
         {/* Exemple d'icône simple avec emoji, tu peux remplacer par un SVG */}
         <span className="text-blood text-3xl">🔥</span>
