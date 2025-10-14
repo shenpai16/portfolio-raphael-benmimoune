@@ -16,14 +16,14 @@ export default function ProjectCard({title, image, slides}: ProjectCardProps) {
     return (
         <>
             <div onClick={() => setOpen(true)} className='cursor-pointer'>
-                <RoundedCard className='group relative overflow-hidden'>
+                <RoundedCard className='group relative overflow-hidden w-full max-w-sm mx-auto'>
                     <h1 className='text-center text-transparent bg-clip-text bg-gradient-to-r
                     from-blue-500 to-blue-200 font-bold'>
                         {title}
                     </h1>
 
                     <div className='flex justify-center gap-6 mt-4'>
-                        <img src={image} alt={title} className='w-full h-48 object-contain transition-transform duration-300 group-hover:scale-105' />
+                        <img src={image} alt={title} className='w-full max-w-full h-48 object-contain transition-transform duration-300 group-hover:scale-105' />
                     </div>
 
                     <div className='absolute inset-0 bg-gradient-to-r from-blue-600 to-blue-400
