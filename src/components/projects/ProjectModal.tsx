@@ -53,7 +53,7 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
 
       {/* Contenu de la modal */}
       <div
-        className="relative z-[10000] w-full max-w-4xl p-4"
+        className="relative z-[10000] w-full max-w-4xl mx-4 sm:mx-6 p-4"
         onClick={(e) => e.stopPropagation()}
         ref={modalRef}
       >
@@ -71,7 +71,7 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
 
         {/* Carrousel */}
         <div className="relative w-full flex items-center">
-            <div className="w-16 flex justify-center">
+            <div className="w-10 sm:w-16 flex justify-center">
                 <button
                    type="button"
                    onClick={prevSlide}
@@ -90,7 +90,7 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
                 />
             </div>
 
-            <div className="w-16 flex justify-center">
+            <div className="w-10 sm:w-16 flex justify-center">
                 <button
                   type="button"
                   onClick={nextSlide}
