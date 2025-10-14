@@ -19,10 +19,10 @@ export default function OffersSection() {
                             <h3 className="text-xl md:text-2xl font-semibold text-center">
                                 Site Vitrine Essentiel
                             </h3>
-                            <p className="text-base md:text-sm text-center text-gray-300">
+                            <p className="text-sm md:text-base lg:text-lg text-center text-gray-300">
                                 Un site moderne et responsive pour présenter votre activité en toute simplicité.
                             </p>
-                            <ul className="text-base md:text-sm list-disc list-inside text-gray-400">
+                            <ul className="text-sm md:text-base lg:text-lg list-disc list-inside text-gray-400">
                                 <li>1 à 3 pages</li>
                                 <li>Design personnalisé</li>
                                 <li>Optimisation SEO de base</li>
@@ -40,10 +40,10 @@ export default function OffersSection() {
                             <h3 className="text-xl md:text-2xl font-semibold text-center">
                                 Site Pro & Back-office
                             </h3>
-                            <p className="text-base md:text-sm text-center text-gray-300">
+                            <p className="text-sm md:text-base lg:text-lg text-center text-gray-300">
                                 Gérez vos contenus, vos utilisateurs ou vos produits grâce à une interface d'administration personnalisée.
                             </p>
-                            <ul className="text-base md:text-sm list-disc list-inside text-gray-400">
+                            <ul className="text-sm md:text-base lg:text-lg list-disc list-inside text-gray-400">
                                 <li>5 à 10 pages</li>
                                 <li>Admin complet</li>
                                 <li>Back-end sécurisé</li>
@@ -61,10 +61,10 @@ export default function OffersSection() {
                             <h3 className="text-xl md:text-2xl font-semibold text-center">
                                 Site 100% Sur-Mesure
                             </h3>
-                            <p className="text-base md:text-sm text-center text-gray-300">
+                            <p className="text-sm md:text-base lg:text-lg text-center text-gray-300">
                                 Un projet complexe, un besoin spécifique ? Je conçois une solution entièrement personnalisée.
                             </p>
-                            <ul className="text-base md:text-sm list-disc list-inside text-gray-400">
+                            <ul className="text-sm md:text-base lg:text-lg list-disc list-inside text-gray-400">
                                 <li>Pages illimitées</li>
                                 <li>Fonctionnalités avancées</li>
                                 <li>Design sur-mesure</li>
@@ -85,15 +85,24 @@ export default function OffersSection() {
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-6 text-base md:text-sm text-gray-300">
                         <div>
                             <BadgeCheck className="mx-auto text-blue-400 w-8 h-8 mb-2" />
-                            Design sur-mesure, adapté à votre image
+                            <p className="text-sm md:text-base lg:text-lg">
+                                Design sur-mesure, adapté à votre image
+                            </p>
+                            
                         </div>
                         <div>
                             <ShieldCheck className="mx-auto text-blue-400 w-8 h-8 mb-2" />
-                            Code propre, sécurisé, et optimisé
+                            <p className="text-sm md:text-base lg:text-lg">
+                                Code propre, sécurisé, et optimisé
+                            </p>
+                            
                         </div>
                         <div>
                             <Star className="mx-auto text-blue-400 w-8 h-8 mb-2" />
-                            Accompagnement, conseils & réactivité
+                            <p className="text-sm md:text-base lg:text-lg">
+                                Accompagnement, conseils & réactivité
+                            </p>
+                            
                         </div>
                     </div>
                 </div>
