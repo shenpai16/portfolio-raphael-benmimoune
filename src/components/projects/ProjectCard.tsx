@@ -7,9 +7,10 @@ type ProjectCardProps = {
   image: string;
   tooltip: string;
   slides: { src: string; caption: string}[];
+  url?: string;
 };
 
-export default function ProjectCard({title, image, slides}: ProjectCardProps) {
+export default function ProjectCard({title, image, slides, url}: ProjectCardProps) {
 
     const [open, setOpen] = useState(false);
 
@@ -31,6 +32,20 @@ export default function ProjectCard({title, image, slides}: ProjectCardProps) {
                         <span className='text-white text-lg font-bold'>Clique pour en savoir plus</span>
                     </div>
                 </RoundedCard>
+
+                {url && (
+                    <div className="text-center mt-4">
+                        <a
+                        href={url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="text-blue-500 hover:underline font-semibold"
+                        >
+                        Voir le site
+                        </a>
+                    </div>
+                )}
+
 
                  {/* Modal */}
                 {open && <ProjectModal slides={slides} onClose={() => setOpen(false)} />}

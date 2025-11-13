@@ -18,7 +18,7 @@ function Header() {
       <h1 className="text-2xl font-bold flex items-center gap-2">
         {/* Exemple d'icône simple avec emoji, tu peux remplacer par un SVG */}
         <span className="text-blood text-3xl">🔥</span>
-        My Portfolio
+         Mon Portfolio
       </h1>
 
       { /* Menu pc */}
