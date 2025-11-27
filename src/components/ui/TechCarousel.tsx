@@ -76,7 +76,7 @@ useEffect(() => {
       {/* Mobile Carousel */}
     <div
         ref={scrollRef}
-        className="md:hidden flex gap-6 px-4 overflow-x-scroll scrollbar-hide"
+        className="md:hidden flex gap-6 px-4 overflow-hidden scrollbar-hide"
         style={{ scrollBehavior: "auto" }}
       >
         {loopTech.map((tech, index) => (

@@ -15,7 +15,7 @@ export const projects = [
       { src: "/assets/accueil_pps.webp", caption: "Accueil du site." },
       { src: "/assets/contact_pps.webp", caption: "Contact du site." },
     ],
-    url: "https://ppsmobilites.fr/"
+    url: "https://ppsmobilite.fr/"
   },
   {
     title: "Admin pour le lycée Pierre Larousse",
