@@ -39,5 +39,4 @@ jobs:
 
           rm -rf /var/www/raphael-benmimoune/*
           cp -r dist/* /var/www/raphael-benmimoune/
-
           sudo systemctl reload apache2
