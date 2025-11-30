@@ -47,38 +47,40 @@ export default function TechCarousel() {
 
       {/* Mobile Carousel */}
       <div className="md:hidden overflow-hidden px-4">
-        <div className="flex marquee w-[200%]">
+        <div className="marquee">
           {/* Bande 1 */}
-          <div className="flex gap-6 w-1/2">
-            {allTech.map((tech) => (
-              <div key={`a-${tech.name}`} className="flex-shrink-0 flex flex-col items-center">
-                <div className="bg-[var(--color-dark)] rounded-full p-4 shadow-lg">
-                  <img
-                    src={typeof tech.img === "string" ? tech.img : Object.values(tech.img)[0]}
-                    alt={tech.name}
-                    className="w-14 h-14"
-                  />
-                </div>
-                <p className="mt-2 text-sm text-gray-200">{tech.name}</p>
+          {allTech.map((tech) => (
+            <div
+              key={`a-${tech.name}`}
+              className="inline-block mx-4 text-center"
+            >
+              <div className="bg-[var(--color-dark)] rounded-full p-4 shadow-lg inline-block">
+                <img
+                  src={typeof tech.img === "string" ? tech.img : Object.values(tech.img)[0]}
+                  alt={tech.name}
+                  className="w-14 h-14"
+                />
               </div>
-            ))}
-          </div>
+              <p className="mt-2 text-sm text-gray-200">{tech.name}</p>
+            </div>
+          ))}
 
           {/* Bande 2 (copie pour effet infini) */}
-          <div className="flex gap-6 w-1/2">
-            {allTech.map((tech) => (
-              <div key={`b-${tech.name}`} className="flex-shrink-0 flex flex-col items-center">
-                <div className="bg-[var(--color-dark)] rounded-full p-4 shadow-lg">
-                  <img
-                    src={typeof tech.img === "string" ? tech.img : Object.values(tech.img)[0]}
-                    alt={tech.name}
-                    className="w-14 h-14"
-                  />
-                </div>
-                <p className="mt-2 text-sm text-gray-200">{tech.name}</p>
+          {allTech.map((tech) => (
+            <div
+              key={`b-${tech.name}`}
+              className="inline-block mx-4 text-center"
+            >
+              <div className="bg-[var(--color-dark)] rounded-full p-4 shadow-lg inline-block">
+                <img
+                  src={typeof tech.img === "string" ? tech.img : Object.values(tech.img)[0]}
+                  alt={tech.name}
+                  className="w-14 h-14"
+                />
               </div>
-            ))}
-          </div>
+              <p className="mt-2 text-sm text-gray-200">{tech.name}</p>
+            </div>
+          ))}
         </div>
       </div>
     </div>
