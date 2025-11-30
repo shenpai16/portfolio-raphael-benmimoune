@@ -11,14 +11,16 @@ useEffect(() => {
     const container = scrollRef.current;
     if (!container) return;
 
-    const speed = 0.5; // pixels par frame
+    let offset = 0;
+    const speed = 0.5; 
     let animationFrame: number;
 
     const autoScroll = () => {
-      container.scrollLeft += speed;
+      offset += speed;
+      container.style.transform = `translateX(-${offset}px)`;
 
-      if (container.scrollLeft >= container.scrollWidth / 2) {
-        container.scrollLeft = 0;
+      if (offset >= container.scrollWidth / 2) {
+        offset = 0;
       }
 
       animationFrame = requestAnimationFrame(autoScroll);
@@ -76,8 +78,7 @@ useEffect(() => {
       {/* Mobile Carousel */}
     <div
         ref={scrollRef}
-        className="md:hidden flex gap-6 px-4 overflow-hidden scrollbar-hide"
-        style={{ scrollBehavior: "auto" }}
+        className="md:hidden flex gap-6 px-4 will-change-transform"
       >
         {loopTech.map((tech, index) => (
           <div
