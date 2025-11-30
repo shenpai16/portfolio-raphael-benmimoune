@@ -50,10 +50,7 @@ export default function TechCarousel() {
         <div className="marquee">
           {/* Bande 1 */}
           {allTech.map((tech) => (
-            <div
-              key={`a-${tech.name}`}
-              className="inline-block mx-4 text-center"
-            >
+            <div key={`a-${tech.name}`} className="inline-block mx-4 text-center">
               <div className="bg-[var(--color-dark)] rounded-full p-4 shadow-lg inline-block">
                 <img
                   src={typeof tech.img === "string" ? tech.img : Object.values(tech.img)[0]}
@@ -65,12 +62,9 @@ export default function TechCarousel() {
             </div>
           ))}
 
-          {/* Bande 2 (copie pour effet infini) */}
+          {/* Bande 2 */}
           {allTech.map((tech) => (
-            <div
-              key={`b-${tech.name}`}
-              className="inline-block mx-4 text-center"
-            >
+            <div key={`b-${tech.name}`} className="inline-block mx-4 text-center">
               <div className="bg-[var(--color-dark)] rounded-full p-4 shadow-lg inline-block">
                 <img
                   src={typeof tech.img === "string" ? tech.img : Object.values(tech.img)[0]}

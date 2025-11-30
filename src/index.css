@@ -169,8 +169,9 @@ html {
   }
 
   .marquee {
+    display: inline-block;
+    white-space: nowrap;
     animation: marquee 20s linear infinite;
     will-change: transform;
-    white-space: nowrap; /* important pour inline-block */
   }
 }
