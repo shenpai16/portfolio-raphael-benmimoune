@@ -18,21 +18,25 @@ export default function TechCarousel() {
     ...backEndTech(),
   ];
 
-  const progressCircle = useRef(null);
-  const progressContent = useRef(null);
+  // Typage explicite des refs pour éviter "never"
+  const progressCircle = useRef<SVGSVGElement | null>(null);
+  const progressContent = useRef<HTMLSpanElement | null>(null);
 
-  const onAutoPlayTimeLeft = (s: any, time: number, progress: number) => {
-    progressCircle.current.style.setProperty("--progress", 1 - progress);
-    progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  const onAutoPlayTimeLeft = (_: unknown, time: number, progress: number) => {
+    if (progressCircle.current) {
+      progressCircle.current.style.setProperty("--progress", String(1 - progress));
+    }
+    if (progressContent.current) {
+      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+    }
   };
 
   return (
     <div className="mt-10">
-      
       {/* Desktop & tablette */}
       <div className="hidden md:block w-full px-4 overflow-hidden">
         <Swiper
-          className="h-32 pb-16" // 👈 padding-bottom ajouté ici
+          className="h-40 pb-16" // hauteur + padding-bottom pour espace sous les slides
           loop={false}
           rewind={true}
           spaceBetween={16}
@@ -52,21 +56,24 @@ export default function TechCarousel() {
           observer={true}
         >
           {allTech.map((tech, index) => (
-  <SwiperSlide
-    key={`${tech.name}-${index}`}
-    className={`flex flex-col items-center justify-center ${index === allTech.length - 1 ? 'mb-6' : ''}`}
-  >
-    <div className="bg-[var(--color-dark)] rounded-full shadow-lg w-20 h-20 flex items-center justify-center">
-      <img src={tech.img} alt={tech.name} className="w-14 h-14" />
-    </div>
-    <p className="mt-2 text-sm text-gray-200 text-center max-w-[80px] truncate">
-      {tech.name}
-    </p>
-  </SwiperSlide>
-))}
+            <SwiperSlide
+              key={`${tech.name}-${index}`}
+              className="flex flex-col items-center justify-center"
+            >
+              <div className="bg-[var(--color-dark)] rounded-full shadow-lg w-20 h-20 flex items-center justify-center">
+                <img src={tech.img} alt={tech.name} className="w-14 h-14" />
+              </div>
+              <p className="mt-2 text-sm text-gray-200 text-center max-w-[80px] truncate">
+                {tech.name}
+              </p>
+            </SwiperSlide>
+          ))}
 
           {/* Autoplay progress */}
-          <div className="autoplay-progress mt-2 flex flex-col items-center gap-1" slot="container-end">
+          <div
+            className="autoplay-progress mt-4 flex flex-col items-center gap-1"
+            slot="container-end"
+          >
             <svg viewBox="0 0 48 48" ref={progressCircle} className="w-8 h-8">
               <circle cx="24" cy="24" r="20"></circle>
             </svg>
