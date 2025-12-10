@@ -6,7 +6,7 @@ export default function AboutSection() {
   return (
     <section
       id="about"
-      className="min-h-screen bg-[var(--color-darker)] flex justify-center items-stretch"
+      className="min-h-screen bg-[var(--color-darker)] flex flex-col justify-center items-center"
       style={{ backgroundColor: "rgba(30, 30, 30, 1)" }} // fallback si var non prise en charge
     >
       <div
