@@ -206,7 +206,7 @@ html {
   transform: rotate(-90deg);
 }
 
-/* Supprime les ombres automatiques de Swiper effect-cards */
+/* Supprime les ombres automatiques de Swiper effect-card */
 .swiper-slide-shadow,
 .swiper-slide-shadow-left,
 .swiper-slide-shadow-right {
