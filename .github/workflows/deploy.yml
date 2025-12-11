@@ -38,10 +38,10 @@ jobs:
           npm run build
 
           # Nettoyage du dossier public
-          rm -rf /var/www/raphael-benmimoune.fr/raphael-benmimoune/*
+          rm -rf /var/www/raphael-benmimoune/*
 
           # Copie du nouveau build
-          cp -r dist/* /var/www/raphael-benmimoune.fr/raphael-benmimoune/
+          cp -r dist/* /var/www/raphael-benmimoune/
 
           # Reload Apache
           sudo systemctl reload apache2
