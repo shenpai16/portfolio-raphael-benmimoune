@@ -19,7 +19,7 @@ jobs:
         node-version: '20'
 
     - name: Install dependencies
-      run: npm ci   
+      run: npm ci
 
     - name: Build project
       run: npm run build
@@ -31,7 +31,17 @@ jobs:
         username: ${{ secrets.VPS_USER }}
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
+          set -e
           cd /var/www/raphael-benmimoune.fr/portfolio-raphael-benmimoune
-          rm -rf /var/www/raphael-benmimoune/*
-          cp -r dist/* /var/www/raphael-benmimoune/
+          git pull origin main
+          npm ci
+          npm run build
+
+          # Nettoyage du dossier public
+          rm -rf /var/www/raphael-benmimoune.fr/raphael-benmimoune/*
+
+          # Copie du nouveau build
+          cp -r dist/* /var/www/raphael-benmimoune.fr/raphael-benmimoune/
+
+          # Reload Apache
           sudo systemctl reload apache2
