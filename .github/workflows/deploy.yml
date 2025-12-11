@@ -32,11 +32,6 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
           cd /var/www/raphael-benmimoune.fr/portfolio-raphael-benmimoune
-          git pull origin main
-
-          npm ci
-          npm run build
-
           rm -rf /var/www/raphael-benmimoune/*
           cp -r dist/* /var/www/raphael-benmimoune/
           sudo systemctl reload apache2
