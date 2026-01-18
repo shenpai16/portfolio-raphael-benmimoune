@@ -32,6 +32,12 @@ export default function Footer() {
           >
             LinkedIn
           </a>
+          <a
+            href="/mentions-legales"
+            className="text-blue-500 hover:text-blue-400 transition"
+          >
+            Mentions légales
+          </a>
         </div>
       </div>
     </footer>
