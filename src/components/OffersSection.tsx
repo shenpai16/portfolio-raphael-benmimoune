@@ -4,7 +4,7 @@ import { BadgeCheck, ShieldCheck, Star } from "lucide-react";
 export default function OffersSection() {
     return (
         <section 
-            id="offers"
+            id="mes-offres"
             className="min-h-screen bg-[var(--color-darker)] flex justify-center items-stretch py-24">
 
             <div className="text-[var(--color-charcoal)] px-8 py-16 w-full max-w-6xl mx-auto">
