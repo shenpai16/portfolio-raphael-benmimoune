@@ -58,7 +58,7 @@ export default function AboutSection() {
           Mes compétences 
         </h2>
 
-        <section id="skills" className="py-16 text-white">
+        <section id="competences" className="py-16 text-white">
           <div className="container mx-auto px-4">
             <TechCarousel />
           </div>
@@ -110,7 +110,7 @@ export default function AboutSection() {
           </div> */}
           {/* Sections Mes Réalisations */}
 
-          <div id="projects" className="flex flex-col gap-8 justify-center items-center mt-36">
+          <div id="projets" className="flex flex-col gap-8 justify-center items-center mt-36">
             <h2 className="text-5xl text-white font-bold mb-8 text-center">
               Mes réalisations
             </h2>

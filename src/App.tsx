@@ -1,27 +1,31 @@
-import IntroSection from "./components/IntroSection";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
+
 import Header from "./layouts/Header";
-import AboutSection from "./components/AboutSection";
-import ServicesSection from "./components/ServicesSection";
-import OffersSection from "./components/OffersSection";
-import ContactSection from "./components/ContactSection";
 import Footer from "./layouts/Footer";
+
+import Home from "./components/ui/Home";
+import MentionsLegalesPages from "./pages/mentionsLegalesPages";
 
 
 export default function App() {
-  return (
-    <>
+return (
+    <BrowserRouter>
       <Header />
-      
-      <main className="flex flex-col items-center justify-center min-h-screen bg-gradient-to-b from-sky-300 via-sky-500 to-blue-700">
-        <IntroSection />
-      </main>
-      
-      <AboutSection />
-      <ServicesSection />
-      <OffersSection />
-      <ContactSection />
+
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/a-propos" element={<Home />} />
+        <Route path="/projets" element={<Home />} />
+        <Route path="/mes-offres" element={<Home />} />
+        <Route path="/contact" element={<Home />} />
+
+        <Route path="/mentions-legales" element={<MentionsLegalesPages />} />
+      </Routes>
+
       <Footer />
 
     </>
+    </BrowserRouter>
   );
 }
