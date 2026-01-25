@@ -24,6 +24,8 @@ return (
       </Routes>
 
       <Footer />
+
+    </>
     </BrowserRouter>
   );
 }
