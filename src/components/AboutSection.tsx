@@ -1,14 +1,18 @@
 import ProjectCard from "./projects/ProjectCard";
 import { projects } from "../data/project";
 import TechCarousel from "./ui/TechCarousel";
+import AnimatedGridBackground from "./ui/AnimatedGrid";
 
 export default function AboutSection() {
   return (
-    <section
-      id="about"
-      className="min-h-screen bg-[var(--color-darker)] flex flex-col justify-center items-center"
-      style={{ backgroundColor: "rgba(30, 30, 30, 1)" }} // fallback si var non prise en charge
-    >
+<section
+  id="about"
+  className="relative min-h-screen flex flex-col justify-center items-center overflow-visible"
+  style={{ transform: "none" }}
+>
+      <AnimatedGridBackground />
+
+
       <div
         className="
           text-[var(--color-charcoal)]
