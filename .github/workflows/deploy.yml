@@ -24,7 +24,17 @@ jobs:
     - name: Build project
       run: npm run build
 
-    - name: Deploy to VPS
+    - name: Deploy build to VPS
+      uses: appleboy/scp-action@v0.1.7
+      with:
+        host: ${{ secrets.VPS_HOST }}
+        username: ${{ secrets.VPS_USER }}
+        key: ${{ secrets.VPS_SSH_KEY }}
+        source: "dist/*"
+        target: "/var/www/portfolio-temp"
+        strip_components: 1
+
+    - name: Activate new build
       uses: appleboy/ssh-action@v0.1.7
       with:
         host: ${{ secrets.VPS_HOST }}
@@ -32,16 +42,13 @@ jobs:
         key: ${{ secrets.VPS_SSH_KEY }}
         script: |
           set -e
-          cd /var/www/raphael-benmimoune.fr/portfolio-raphael-benmimoune
-          git pull origin main
-          npm ci
-          npm run build
 
-          # Nettoyage du dossier public
-          rm -rf /var/www/raphael-benmimoune/*
+          sudo mkdir -p /var/www/portfolio
 
-          # Copie du nouveau build
-          cp -r dist/* /var/www/raphael-benmimoune/
+          sudo rm -rf /var/www/portfolio/*
 
-          # Reload Apache
-          sudo systemctl reload apache2
+          sudo mv /var/www/portfolio-temp/* /var/www/portfolio/
+
+          sudo rm -rf /var/www/portfolio-temp
+
+          sudo systemctl reload nginx
