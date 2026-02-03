@@ -10,6 +10,7 @@ import MentionsLegalesPages from "./pages/mentionsLegalesPages";
 
 export default function App() {
 return (
+  <>
     <BrowserRouter>
       <Header />
 
@@ -24,8 +25,8 @@ return (
       </Routes>
 
       <Footer />
+    </BrowserRouter>
 
     </>
-    </BrowserRouter>
   );
 }
