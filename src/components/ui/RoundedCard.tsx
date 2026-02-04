@@ -7,11 +7,19 @@ type RoundedCardProps = {
 
 export default function RoundedCard({ children, className = "" }: RoundedCardProps) {
   return (
-    <div className={`relative p-0.5 rounded-xl bg-black mt-10 ${className}`}>
-      <div className="bg-[var(--color-dark)] rounded-lg p-6">
+    <div
+      className={`
+        relative rounded-xl p-[1px]
+        bg-gradient-to-br from-white/10 to-white/5
+        backdrop-blur-sm
+        ${className}
+      `}
+    >
+      <div className="bg-[var(--color-dark)] rounded-xl p-6">
         {children}
       </div>
     </div>
+
   );
 }
 
