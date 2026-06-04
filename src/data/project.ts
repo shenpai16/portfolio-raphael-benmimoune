@@ -9,11 +9,14 @@ export const projects = [
   },
   {
     title: "Produits maison pour seniors et personnes handicapées",
-    image: "/assets/pps.png",
+    image: "/assets/pps/pps.png",
     tooltip: "Fait en React",
     slides: [
-      { src: "/assets/accueil_pps.webp", caption: "Accueil du site." },
-      { src: "/assets/contact_pps.webp", caption: "Contact du site." },
+      { src: "/assets/pps/accueil1.png", caption: "Accueil du site." },
+      { src: "/assets/pps/accueil2.png", caption: "Accueil du site partie 2." },
+      { src: "/assets/pps/projet.png", caption: "Page des projets réalisés." },
+      { src: "/assets/pps/projetDetail.png", caption: "Page d'un projet détaillé." },
+      { src: "/assets/pps/contact.png", caption: "Page de contact." },
     ],
     url: "https://ppsmobilite.fr/"
   },
