@@ -20,12 +20,14 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
       if (e.key === "ArrowRight") nextSlide();
     };
     document.addEventListener("keydown", onKey);
-
-    const prev = document.body.style.overflow;
-    document.body.style.overflow = "hidden";
+    
+    document.body.classList.add("overflow-hidden");
+    document.documentElement.classList.add("overflow-hidden");
+    
     return () => {
       document.removeEventListener("keydown", onKey);
-      document.body.style.overflow = prev;
+      document.body.classList.remove("overflow-hidden");
+      document.documentElement.classList.remove("overflow-hidden");
     };
   }, [onClose, prevSlide, nextSlide]);
 
@@ -59,9 +61,12 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
         ref={modalRef}
         onClick={(e) => e.stopPropagation()}
         className="
-          relative z-[10000] w-full max-w-4xl mx-4 sm:mx-6 p-6
+          relative z-[10000]
+          w-[95vw] max-w-[1600px] h-[90vh]
+          mx-auto p-4 sm:p-8
           rounded-2xl bg-black/40 backdrop-blur-xl border border-white/10
           shadow-2xl shadow-black/40
+          flex flex-col justify-center
           animate-fadeIn
         "
       >
@@ -108,7 +113,8 @@ export default function ProjectModal({ slides, onClose }: ProjectModalProps) {
               src={slides[current].src}
               alt={`slide ${current + 1}`}
               className="
-                max-h-[70vh] object-contain rounded-xl shadow-xl
+                max-h-[75vh] sm:max-h-[80vh] md:max-h-[85vh]
+                object-contain rounded-xl shadow-xl
                 opacity-0 animate-fadeInSlow
                 pointer-events-none
               "
