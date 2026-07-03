@@ -23,9 +23,9 @@ export default function ServicesSection() {
     <section className="relative bg-gradient-to-b 
     from-[var(--color-darker)] 
     to-[var(--color-dark)] 
- py-24 px-6 overflow-hidden">
+ py-24 px-6">
       {/* Glow subtil */}
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/20 blur-[150px] rounded-full pointer-events-none"></div>
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/20 blur-[150px] rounded-full pointer-events-none -z-10"></div>
 
       <h2 className="text-5xl font-bold text-center mb-16 text-white relative z-10">
         Mes services
